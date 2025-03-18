@@ -1,42 +1,49 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.destination-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.destination-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.destination-card:hover {
+  transform: scale(1.05);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.destination-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.destination-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
-.card {
-  padding: 2em;
+.destination-location {
+  font-size: 1.2rem;
+  color: gray;
 }
 
-.read-the-docs {
-  color: #888;
+.destination-description {
+  font-size: 1rem;
+  margin: 10px;
+  color: #555;
+}
+
+.destination-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: green;
+  margin: 10px 0;
 }
